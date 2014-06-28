@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<script type="text/javascript" src="script.js"></script>
+<body  >
+
+<!-- change the color of background by replacing the above color code-->
+
+<div style="width:auto" >
+
+<br />
+<form  id="form1" name="form1" method="post" action="" style="background-color:#E64946 ; margin-bottom:10px; padding:20px; width:550px; border-width:medium; border-style:solid">
+<table cellpadding="10">
+	<tr>
+    	<td>
+  Child's Sex
+  		</td>
+        <td>
+  <input name="radiosex" type="radio" id="male" value="male" checked="checked" />
+    <label for="male">Male</label>
+    <input type="radio" name="radiosex" id="female" value="female" />
+    <label for="female">Female</label>
+  		</td>
+      </tr>  
+     <tr>
+     	<td>
+  Child's Age 
+  		</td>
+        <td>
+    <label for="year"></label>
+    <select name="year" id="year">
+      <option value="LT4">&lt;4</option>
+      <option value="40">4</option>
+      <option value="45">4.5</option>
+      <option value="50">5</option>
+      <option value="55">5.5</option>
+      <option value="60">6</option>
+      <option value="65">6.5</option>
+      <option value="70">7</option>
+      <option value="75">7.5</option>
+      <option value="80">8</option>
+      <option value="85">8.5</option>
+      <option value="90">9</option>
+      <option value="95">9.5</option>
+      <option value="100">10</option>
+      <option value="105">10.5</option>
+      <option value="110">11</option>
+      <option value="115">11.5</option>
+      <option value="120">12</option>
+      <option value="125">12.5</option>
+      <option value="130">13</option>
+      <option value="135">13.5</option>
+      <option value="140">14</option>
+      <option value="145">14.5</option>
+      <option value="150">15</option>
+      <option value="155">15.5</option>
+      <option value="160">16</option>
+      <option value="165">16.5</option>
+      <option value="170">17</option>
+      <option value="175">17.5</option>
+    </select>
+  			</td>
+            </tr>
+         <tr>
+         	<td>
+  Child's Height 
+  			</td>
+            <td>
+  
+    <input name="radioheight" type="radio" id="hmetric" value="metric" checked="checked" onclick="unitswap('heightm','heighti','chi','chf');"/>
+    <label for="hmetric">Metric</label>
+    <input name="radioheight" type="radio" id="himperial" onclick="unitswap('heighti','heightm','chcm','chcm');" value="imperial" />
+    <label for="himperial">American</label>
+  <div id="heightm" style=" display:none"><input type="number" min="0" id="chcm"/> cm</div>
+  <div id ="heighti"  >
+  
+    <input type = "number" min="0" id = "chf"/>
+    feet  <input type = "number" min="0" id = "chi"/> inches</div>
+  		</td>
+    </tr>
+    <tr>
+  		<td>
+  
+  Child's Weight 
+  		</td>
+        <td>
+    <input name="radioweight" type="radio" id="wmetric" value="metric" checked="checked" onclick="unitswap('weightm','weighti','chp','chp');"/>
+    <label for="wmetric">Metric</label>
+    <input name="radioweight" type="radio" id="wimperial" onclick="unitswap('weighti','weightm','chk','chk');" value="imperial" />
+    <label for="wimperial">American</label>
+  <div id="weightm" style=" display:none"><input type="number" min="0" id="chk"/> Kg</div>
+  <div id ="weighti"  >
+  
+    <input type = "number" min="0" id = "chp"/> Pound</div>
+    
+  		</td>
+      </tr>
+      <tr>
+  		<td>
+   Mother's Height 
+  		</td>
+        <td>
+    <input name="mradioheight" type="radio" id="mhmetric" value="metric" checked="checked" onclick="unitswap('mheightm','mheighti','mf','mi')"/>
+    <label for="mhmetric">Metric</label>
+    <input name="mradioheight" type="radio" id="mhimperial" onclick="unitswap('mheighti','mheightm','mcm','mcm')" value="imperial" />
+    <label for="mhimperial">American</label>
+  <div id="mheightm" style=" display:none"><input type="number" min="0" id="mcm"/> cm</div>
+  <div id ="mheighti"  >
+  
+    <input type = "number" min="0" id = "mf"/>
+    feet  <input type = "number" min="0" id = "mi"/> inches</div>
+  		</td>
+    </tr>
+  	<tr>
+    	<td>
+  
+  Father's Height 
+  		</td>
+        <td>
+    <input name="fradioheight" type="radio" id="fhmetric" value="metric" checked="checked" onclick="unitswap('fheightm','fheighti','fi','ff')"/>
+    <label for="fhmetric">Metric</label>
+    <input name="fradioheight" type="radio" id="fhimperial" onclick="unitswap('fheighti','fheightm','fcm','fcm')" value="imperial" />
+    <label for="fhimperial">American</label>
+  <div id="fheightm" style=" display:none"><input type="number" min="0" id="fcm" /> cm</div>
+  <div id ="fheighti"  >
+  
+    <input type = "number" min="0" id = "ff"/>
+    feet  <input type = "number" min="0" id = "fi" /> inches</div>
+  		</td>
+    </tr>
+    <tr>
+  		<td>
+  
+  <input type="button" value="calculate" onclick="calculate()"/>
+  		</td>
+        <td>
+  <label for="result"></label><input type="text" name="result" id="result" />
+  		</td>
+        </tr>
+        </table>
+</form>
+
+
+</div>
+
+</body>
+</html>
